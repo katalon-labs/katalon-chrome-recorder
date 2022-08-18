@@ -1,6 +1,6 @@
 # Katalon Chrome Recorder
 
-[![Build](https://github.com/katalonlabs/katalon-chrome-recorder/actions/workflows/build.yml/badge.svg)](https://github.com/katalonlabs/katalon-chrome-recorder/actions/workflows/build.yml)
+[![Build](https://github.com/katalon-labs/katalon-chrome-recorder/actions/workflows/build.yml/badge.svg)](https://github.com/katalon-labs/katalon-chrome-recorder/actions/workflows/build.yml)
 [![npm][npm-badge]][npm]
 
 This repo provide tools to convert JSON user flows from [Google Chrome DevTools Recorder](https://goo.gle/devtools-recorder) to Katalon test scripts programmatically.
