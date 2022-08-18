@@ -1,28 +1,28 @@
-# Nightwatch Chrome Recorder
+# Katalon Chrome Recorder
 
-[![Build](https://github.com/vaibhavsingh97/nightwatch-chrome-recorder/actions/workflows/build.yml/badge.svg)](https://github.com/vaibhavsingh97/nightwatch-chrome-recorder/actions/workflows/build.yml)
+[![Build](https://github.com/katalonstudio/katalon-chrome-recorder/actions/workflows/build.yml/badge.svg)](https://github.com/katalonstudio/katalon-chrome-recorder/actions/workflows/build.yml)
 [![npm][npm-badge]][npm]
 [![Discord][discord-badge]][discord]
 
-This repo provide tools to convert JSON user flows from [Google Chrome DevTools Recorder](https://goo.gle/devtools-recorder) to Nightwatch test scripts programmatically.
+This repo provide tools to convert JSON user flows from [Google Chrome DevTools Recorder](https://goo.gle/devtools-recorder) to Katalon test scripts programmatically.
 
-✅ Converts multiple recordings to Nightwatch tests in one go (out-of-the-box glob support)  
+✅ Converts multiple recordings to Katalon tests in one go (out-of-the-box glob support)  
 🗂 User can pass their custom path to export tests.  
 💃 Users can also use a dry run to see the interim output of the recordings  
 👨‍💻 Programmatic API which users can use in their own project to create plugins or custom scripts.
 
-Alternatively, you can export JSON user flows as Nightwatch test scripts straight away from Chrome DevTools with our [Nightwatch Recorder Chrome extension](https://chrome.google.com/webstore/detail/nightwatch-chrome-recorde/nhbccjfogdgkahamfohokdhcnemjafjk/). 
+Alternatively, you can export JSON user flows as Katalon test scripts straight away from Chrome DevTools with our [Katalon Recorder Chrome extension](https://chrome.google.com/webstore/detail/katalon-chrome-recorde/nhbccjfogdgkahamfohokdhcnemjafjk/). 
 
-See [Create Nightwatch test using Google Chrome DevTools Recorder](https://nightwatchjs.org/guide/writing-tests/chrome-devtools-recorder.html) to learn more.
+See [Create Katalon test using Google Chrome DevTools Recorder](https://katalonjs.org/guide/writing-tests/chrome-devtools-recorder.html) to learn more.
 
 ## 📹 Demo
 
-![Nightwatch Chrome Recorder Demo](.github/assets/demo.gif)
+![Katalon Chrome Recorder Demo](.github/assets/demo.gif)
 
 ## 🏗 Installation
 
 ```sh
-npm install -g @nightwatch/chrome-recorder
+npm install -g @katalon/chrome-recorder
 ```
 
 ## 🚀 Usage
@@ -30,29 +30,29 @@ npm install -g @nightwatch/chrome-recorder
 To quickly run the interactive CLI, run:
 
 ```sh
-npx @nightwatch/chrome-recorder
+npx @katalon/chrome-recorder
 ```
 
-> The CLI will prompt you to enter the path of directory or file of the chrome devtool recordings that you will modify and path to write the generated Nightwatch tests
+> The CLI will prompt you to enter the path of directory or file of the chrome devtool recordings that you will modify and path to write the generated Katalon tests
 
 **⚡️ Transform individual recordings**
 
 ```sh
-npx @nightwatch/chrome-recorder <path to the chrome devtools recording>
+npx @katalon/chrome-recorder <path to the chrome devtools recording>
 ```
 
 **⚡️ Transform multiple recordings**
 
 ```sh
-npx @nightwatch/chrome-recorder <path to the chrome devtools recording>*.json
+npx @katalon/chrome-recorder <path to the chrome devtools recording>*.json
 ```
 
-👉 By default output will be written to `nightwatch` folder. If you don't have these folders, tool will create it for you or install nightwatch by running `npm init nightwatch` in your project.
+👉 By default output will be written to `katalon` folder. If you don't have these folders, tool will create it for you or install katalon by running `npm init katalon` in your project.
 
 You can specify different output directory, specify that via cli
 
 ```sh
-npx @nightwatch/chrome-recorder <path to the chrome devtools recording> --output=<folder-name>
+npx @katalon/chrome-recorder <path to the chrome devtools recording> --output=<folder-name>
 ```
 
 ## ⚙️ CLI Options
@@ -65,7 +65,7 @@ npx @nightwatch/chrome-recorder <path to the chrome devtools recording> --output
 ## 💻 Programmatic API
 
 ```javascript
-import { nightwatchStringifyChromeRecording } from '@nightwatch/chrome-recorder';
+import { katalonStringifyChromeRecording } from '@katalon/chrome-recorder';
 
 const recordingContent = {
   title: 'recording',
@@ -82,7 +82,7 @@ const recordingContent = {
   ],
 };
 
-const stringifiedContent = await nightwatchStringifyChromeRecording(
+const stringifiedContent = await katalonStringifyChromeRecording(
   JSON.stringify(recordingContent),
 );
 
@@ -102,7 +102,7 @@ You can find about more about Programmatic API [here](docs/README.md)
 
 ## 🐛 Issues
 
-Issues with this schematic can filed [here](https://github.com/nightwatchjs/nightwatch-chrome-recorder/issues)
+Issues with this schematic can filed [here](https://github.com/katalonjs/katalon-chrome-recorder/issues)
 
 If you want to contribute (or have contributed in the past), feel free to add yourself to the list of contributors in the package.json before you open a PR!
 
@@ -112,7 +112,7 @@ If you want to contribute (or have contributed in the past), feel free to add yo
 
 🛠️ [Node.js and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) are required for the scripts. Make sure it's installed on your machine.
 
-⬇️ **Install** the dependencies for the nightwatch chrome recorder tool
+⬇️ **Install** the dependencies for the katalon chrome recorder tool
 
 ```bash
 npm install
@@ -127,7 +127,7 @@ npm run build
 🏃 **Run** the tool
 
 ```bash
-./bin/nightwatch-chrome-recorder.js
+./bin/katalon-chrome-recorder.js
 ```
 
 ### 🧪 Unit Testing
@@ -162,7 +162,7 @@ We only support following steps:
 
 If the step type is not mentioned above, a warning will be shown.
 
-[npm-badge]: https://img.shields.io/npm/v/@nightwatch/chrome-recorder.svg
-[npm]: https://www.npmjs.com/package/@nightwatch/chrome-recorder
+[npm-badge]: https://img.shields.io/npm/v/@katalon/chrome-recorder.svg
+[npm]: https://www.npmjs.com/package/@katalon/chrome-recorder
 [discord-badge]: https://img.shields.io/discord/618399631038218240.svg?color=7389D8&labelColor=6A7EC2&logo=discord&logoColor=ffffff&style=flat-square
 [discord]: https://discord.gg/SN8Da2X

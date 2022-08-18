@@ -1,1 +1,1 @@
-export const defaultOutputFolder = 'nightwatch';
+export const defaultOutputFolder = 'katalon';

@@ -1,9 +1,9 @@
 {
-  "name": "@nightwatch/chrome-recorder",
+  "name": "@katalon/chrome-recorder",
   "version": "0.1.4",
-  "description": "Generate Nightwatch Tests from Google Chrome DevTools Recordings",
+  "description": "Generate Katalon Tests from Google Chrome DevTools Recordings",
   "main": "dist/main.js",
-  "bin": "bin/nightwatch-chrome-recorder.js",
+  "bin": "bin/katalon-chrome-recorder.js",
   "files": [
     "bin",
     "dist"
@@ -21,21 +21,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nightwatchjs/nightwatch-chrome-recorder.git"
+    "url": "git+https://github.com/katalonstudio/katalon-chrome-recorder.git"
   },
   "keywords": [
-    "nightwatch",
+    "katalon",
     "testing",
     "e2e",
     "automation",
     "devtools"
   ],
-  "author": "Vaibhav Singh <vaibhav.s@browserstack.com>",
+  "author": "Coty Rosenblath <coty@katalon.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nightwatchjs/nightwatch-chrome-recorder/issues"
+    "url": "https://github.com/katalonstudio/katalon-chrome-recorder/issues"
   },
-  "homepage": "https://github.com/nightwatchjs/nightwatch-chrome-recorder#readme",
+  "homepage": "https://github.com/katalonstudio/katalon-chrome-recorder#readme",
   "devDependencies": {
     "@types/chai": "^4.3.3",
     "@types/inquirer": "^9.0.0",
@@ -45,13 +45,14 @@
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
     "chai": "^4.3.6",
+    "eslint": "^8.21.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint": "^8.21.0",
     "mocha": "^10.0.0",
+    "prettier-plugin-java": "^1.6.2",
     "ts-node": "^10.9.1",
-    "typedoc-plugin-markdown": "^3.13.4",
     "typedoc": "^0.23.10",
+    "typedoc-plugin-markdown": "^3.13.4",
     "typescript": "^4.7.4"
   },
   "dependencies": {
@@ -60,6 +61,7 @@
     "globby": "^13.1.2",
     "inquirer": "^9.1.0",
     "meow": "^10.1.3",
+    "npm-groovy-lint": "^10.1.0",
     "prettier": "^2.7.1"
   }
 }

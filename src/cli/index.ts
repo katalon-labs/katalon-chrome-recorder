@@ -8,7 +8,7 @@ import { runTransformsOnChromeRecording } from '../transform.js';
 const cli = meow(
   `
   Usage
-    $ npx nightwatch-chrome-recorder <path-of-recording.json> [options]
+    $ npx katalon-chrome-recorder <path-of-recording.json> [options]
 
   Options
 
@@ -17,8 +17,8 @@ const cli = meow(
 
   Examples
 
-    $ npx nightwatch-chrome-recorder recordings.json
-    $ npx nightwatch-chrome-recorder recordings/*.json
+    $ npx katalon-chrome-recorder recordings.json
+    $ npx katalon-chrome-recorder recordings/*.json
 `,
   {
     importMeta: import.meta,
@@ -40,7 +40,7 @@ inquirer
       type: 'input',
       name: 'files',
       message:
-        'Which directory or files should be translated from Recorder JSON to Nightwatch?',
+        'Which directory or files should be translated from Recorder JSON to Katalon?',
       when: () => !cli.input.length,
       default: '.',
       filter(files: string) {
@@ -54,7 +54,7 @@ inquirer
       name: 'outputPath',
       message: 'Where should be exported files to be output?',
       when: () => !cli.input.length,
-      default: 'nightwatch',
+      default: 'katalon',
     },
   ])
   .then((answers: InquirerAnswerTypes) => {

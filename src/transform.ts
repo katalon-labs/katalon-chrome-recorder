@@ -1,20 +1,23 @@
 import chalk from 'chalk';
 import { readFileSync, writeFile, mkdir, existsSync } from 'fs';
 import * as path from 'path';
-import { nightwatchStringifyChromeRecording } from './main.js';
+import { katalonStringifyChromeRecording } from './main.js';
 import { ExportToFile, Flags } from './types.js';
 import { format } from 'prettier';
+import { stringify } from 'querystring';
 
 const __dirname = path.resolve(path.dirname('.'));
 
 export function formatParsedRecordingContent(
   transformedRecordingContent: string,
 ): string {
-  return format(transformedRecordingContent, {
-    semi: true,
-    singleQuote: true,
-    parser: 'babel',
-  });
+  // return format(transformedRecordingContent, {
+  //   semi: true,
+  //   singleQuote: true,
+  //   parser: 'java',
+  //   plugins: ["prettier-plugin-java"]
+  // });
+  return transformedRecordingContent;
 }
 
 export function runTransformsOnChromeRecording({
@@ -31,11 +34,11 @@ export function runTransformsOnChromeRecording({
 
   return files.map(async (file) => {
     console.log(
-      chalk.green(`🦉 Running Nightwatch  Chrome Recorder on ${file}\n`),
+      chalk.green(`🦉 Running Katalon  Chrome Recorder on ${file}\n`),
     );
 
     const recordingContent = readFileSync(file, 'utf-8');
-    const stringifiedFile = await nightwatchStringifyChromeRecording(
+    const stringifiedFile = await katalonStringifyChromeRecording(
       recordingContent,
     );
 
@@ -94,19 +97,19 @@ function exportFileToFolder({
     );
   } else {
     writeFile(
-      path.join(outputFolder, `/${testName}.js`),
+      path.join(outputFolder, `/${testName}.groovy`),
       stringifiedFile,
       (err: NodeJS.ErrnoException | null) => {
         if (!err) {
           console.log(
             chalk.green(
-              `\n ✅ ${testName}.json exported to ${outputPath}/${testName}.js\n `,
+              `\n ✅ ${testName}.json exported to ${outputPath}/${testName}.groovy\n `,
             ),
           );
         } else {
           console.log(
             chalk.red(
-              `\n 😭 Something went wrong exporting ${outputPath}/${testName}.js \n`,
+              `\n 😭 Something went wrong exporting ${outputPath}/${testName}.groovy \n`,
             ),
           );
         }

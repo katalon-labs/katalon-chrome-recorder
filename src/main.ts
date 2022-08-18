@@ -1,5 +1,5 @@
 import { parse, Schema, stringify } from '@puppeteer/replay';
-import { NightwatchStringifyExtension } from './nightwatchStringifyExtension.js';
+import { KatalonStringifyExtension } from './katalonStringifyExtension.js';
 
 export function parseRecordingContent(
   recordingContent: string,
@@ -11,11 +11,11 @@ export async function transformParsedRecording(
   parsedRecording: Schema.UserFlow,
 ) {
   return await stringify(parsedRecording, {
-    extension: new NightwatchStringifyExtension(),
+    extension: new KatalonStringifyExtension(),
   });
 }
 
-export async function nightwatchStringifyChromeRecording(
+export async function katalonStringifyChromeRecording(
   recording: string,
 ): Promise<Promise<string> | undefined> {
   if (recording.length === 0) {
