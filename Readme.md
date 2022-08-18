@@ -1,8 +1,7 @@
 # Katalon Chrome Recorder
 
-[![Build](https://github.com/katalonstudio/katalon-chrome-recorder/actions/workflows/build.yml/badge.svg)](https://github.com/katalonstudio/katalon-chrome-recorder/actions/workflows/build.yml)
+[![Build](https://github.com/katalonlabs/katalon-chrome-recorder/actions/workflows/build.yml/badge.svg)](https://github.com/katalonlabs/katalon-chrome-recorder/actions/workflows/build.yml)
 [![npm][npm-badge]][npm]
-[![Discord][discord-badge]][discord]
 
 This repo provide tools to convert JSON user flows from [Google Chrome DevTools Recorder](https://goo.gle/devtools-recorder) to Katalon test scripts programmatically.
 
@@ -14,10 +13,6 @@ This repo provide tools to convert JSON user flows from [Google Chrome DevTools 
 Alternatively, you can export JSON user flows as Katalon test scripts straight away from Chrome DevTools with our [Katalon Recorder Chrome extension](https://chrome.google.com/webstore/detail/katalon-chrome-recorde/nhbccjfogdgkahamfohokdhcnemjafjk/). 
 
 See [Create Katalon test using Google Chrome DevTools Recorder](https://katalonjs.org/guide/writing-tests/chrome-devtools-recorder.html) to learn more.
-
-## 📹 Demo
-
-![Katalon Chrome Recorder Demo](.github/assets/demo.gif)
 
 ## 🏗 Installation
 
@@ -153,12 +148,9 @@ We only support following steps:
 3. `click`
 4. `change`
 5. `keyDown`
-6. `keyUp`
-7. `scroll`
-8. `doubleClick`
-9. `hover`
-10. `emulateNetworkConditions`
-11. `waitForElement`
+6. `scroll`
+7. `hover`
+8. `waitForElement`
 
 If the step type is not mentioned above, a warning will be shown.
 
